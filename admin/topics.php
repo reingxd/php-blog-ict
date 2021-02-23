@@ -1,6 +1,6 @@
 <?php include('../config.php'); ?>
-<?php include(ROOT_PATH . '/admin/includes/admin_functions.php'); ?>
-<?php include(ROOT_PATH . '/admin/includes/head_section.php'); ?>
+<?php include('./includes/admin_functions.php'); ?>
+<?php include('./includes/head_section.php'); ?>
 
 <?php $topics = getAllTopics();    ?>
 <title>Admin | Manage Topics</title>
@@ -8,14 +8,14 @@
 
 <body>
 
-    <?php include(ROOT_PATH . '/admin/includes/navbar.php') ?>
+    <?php include('./includes/navbar.php') ?>
     <div class="container content">
 
-        <?php include(ROOT_PATH . '/admin/includes/menu.php') ?>
+        <?php include('./includes/menu.php') ?>
         <div class="action">
             <h1 class="page-title">Create/Edit Topics</h1>
-            <form method="post" action="<?php echo BASE_URL . 'admin/topics.php'; ?>">
-                <?php include(ROOT_PATH . '/includes/errors.php') ?>
+            <form method="post" action="<?php echo'./topics.php'; ?>">
+                <?php include('../includes/errors.php') ?>
                 <?php if ($isEditingTopic === true) : ?>
                     <input type="hidden" name="topic_id" value="<?php echo $topic_id; ?>">
                 <?php endif ?>
@@ -28,7 +28,7 @@
             </form>
         </div>
         <div class="table-div">
-            <?php include(ROOT_PATH . '/includes/messages.php') ?>
+            <?php include('../includes/messages.php') ?>
             <?php if (empty($topics)) : ?>
                 <h1>No topics in the database.</h1>
             <?php else : ?>

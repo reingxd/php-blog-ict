@@ -1,25 +1,25 @@
 <?php include('../config.php'); ?>
-<?php include(ROOT_PATH . '/admin/includes/admin_functions.php'); ?>
+<?php include( './includes/admin_functions.php'); ?>
 <?php
 $admins = getAdminUsers();
 $roles = ['Admin', 'Author'];
 ?>
-<?php include(ROOT_PATH . '/admin/includes/head_section.php'); ?>
+<?php include( './includes/head_section.php'); ?>
 <title>Admin | Manage users</title>
 </head>
 
 <body>
-    <?php include(ROOT_PATH . '/admin/includes/navbar.php') ?>
+    <?php include( './includes/navbar.php') ?>
     <div class="container content">
-        <?php include(ROOT_PATH . '/admin/includes/menu.php') ?>
+        <?php include( './includes/menu.php') ?>
 
         <div class="action">
             <h1 class="page-title">Create/Edit Admin User</h1>
 
-            <form method="post" action="<?php echo BASE_URL . 'admin/users.php'; ?>">
+            <form method="post" action="<?php echo  './users.php'; ?>">
 
 
-                <?php include(ROOT_PATH . '/includes/errors.php') ?>
+                <?php include( '../includes/errors.php') ?>
 
 
                 <?php if ($isEditingUser === true) : ?>
@@ -48,7 +48,7 @@ $roles = ['Admin', 'Author'];
 
         <div class="table-div">
 
-            <?php include(ROOT_PATH . '/includes/messages.php') ?>
+            <?php include( '../includes/messages.php') ?>
 
             <?php if (empty($admins)) : ?>
                 <h1>No admins in the database.</h1>
