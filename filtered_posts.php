@@ -7,14 +7,14 @@
 		$posts = getPublishedPostsByTopic($topic_id);
 	}
 ?>
-	<title>LifeBlog | Home </title>
+	<title>Артистический блог</title>
 </head>
 <body>
 <div class="container">
 	<?php include( ROOT_PATH . '/includes/navbar.php'); ?>
 <div class="content">
 	<h2 class="content-title">
-		Articles on <u><?php echo getTopicNameById($topic_id); ?></u>
+		Посты по теме <u><?php echo getTopicNameById($topic_id); ?></u>
 	</h2>
 	<hr>
 	<?php foreach ($posts as $post): ?>
@@ -25,7 +25,7 @@
 					<h3><?php echo $post['title'] ?></h3>
 					<div class="info">
 						<span><?php echo date("F j, Y ", strtotime($post["created_at"])); ?></span>
-						<span class="read_more">Read more...</span>
+						<span class="read_more">Читать больше...</span>
 					</div>
 				</div>
 			</a>

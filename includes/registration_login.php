@@ -14,16 +14,16 @@ if (isset($_POST['reg_user'])) {
 
 
     if (empty($username)) {
-        array_push($errors, "Uhmm...We gonna need your username");
+        array_push($errors, "Не хватает логина");
     }
     if (empty($email)) {
-        array_push($errors, "Oops.. Email is missing");
+        array_push($errors, "Не хватает почты");
     }
     if (empty($password_1)) {
-        array_push($errors, "uh-oh you forgot the password");
+        array_push($errors, "Не хватает пароля");
     }
     if ($password_1 != $password_2) {
-        array_push($errors, "The two passwords do not match");
+        array_push($errors, "Пароли не одинаковы");
     }
 
 
@@ -35,10 +35,10 @@ if (isset($_POST['reg_user'])) {
 
     if ($user) {
         if ($user['username'] === $username) {
-            array_push($errors, "Username already exists");
+            array_push($errors, "Логин зарегестрирован");
         }
         if ($user['email'] === $email) {
-            array_push($errors, "Email already exists");
+            array_push($errors, "Почта зарегестрирована");
         }
     }
 
@@ -55,12 +55,12 @@ if (isset($_POST['reg_user'])) {
 
 
         if (in_array($_SESSION['user']['role'], ["Admin", "Author"])) {
-            $_SESSION['message'] = "You are now logged in";
+            $_SESSION['message'] = "Вход осуществлен";
 
             header('location: ' . BASE_URL . 'admin/dashboard.php');
             exit(0);
         } else {
-            $_SESSION['message'] = "You are now logged in";
+            $_SESSION['message'] = "Вход осуществлен";
 
             header('location: index.php');
             exit(0);
@@ -74,10 +74,10 @@ if (isset($_POST['login_btn'])) {
     $password = esc($_POST['password']);
 
     if (empty($username)) {
-        array_push($errors, "Username required");
+        array_push($errors, "Необходим логин");
     }
     if (empty($password)) {
-        array_push($errors, "Password required");
+        array_push($errors, "Необходим пароль");
     }
     if (empty($errors)) {
         $password = md5($password);
@@ -93,12 +93,12 @@ if (isset($_POST['login_btn'])) {
 
 
             if (in_array($_SESSION['user']['role'], ["Admin", "Author"])) {
-                $_SESSION['message'] = "You are now logged in";
+                $_SESSION['message'] = "Вход осуществлен";
 
                 header('location: ' . BASE_URL . '/admin/dashboard.php');
                 exit(0);
             } else {
-                $_SESSION['message'] = "You are now logged in";
+                $_SESSION['message'] = "Вход осуществлен";
 
                 header('location: index.php');
                 exit(0);

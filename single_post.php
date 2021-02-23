@@ -6,8 +6,8 @@ if (isset($_GET['post-slug'])) {
 }
 $topics = getAllTopics();
 ?>
-<?php include('includes/head_section.php'); ?>
-<title> <?php echo $post['title'] ?> | LifeBlog</title>
+<?php include('includes/header.php'); ?>
+<title> <?php echo $post['title'] ?> Артистический блог</title>
 </head>
 
 <body>
@@ -18,7 +18,7 @@ $topics = getAllTopics();
             <div class="post-wrapper">
                 <div class="full-post-div">
                     <?php if ($post['published'] == false) : ?>
-                        <h2 class="post-title">Sorry... This post has not been published</h2>
+                        <h2 class="post-title">Этот пост еще не создан</h2>
                     <?php else : ?>
                         <h2 class="post-title"><?php echo $post['title']; ?></h2>
                         <div class="post-body-div">
@@ -30,7 +30,7 @@ $topics = getAllTopics();
             <div class="post-sidebar">
                 <div class="card">
                     <div class="card-header">
-                        <h2>Topics</h2>
+                        <h2>Темы</h2>
                     </div>
                     <div class="card-content">
                         <?php foreach ($topics as $topic) : ?>

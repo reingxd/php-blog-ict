@@ -35,7 +35,7 @@
 				<h3><?php echo $post['title'] ?></h3>
 				<div class="info">
 					<span><?php echo date("F j, Y ", strtotime($post["created_at"])); ?></span>
-					<span class="read_more">Read more...</span>
+					<span class="read_more">Читать больше...</span>
 				</div>
 			</div>
 		</a>

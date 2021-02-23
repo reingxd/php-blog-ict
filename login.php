@@ -1,7 +1,7 @@
 <?php include('config.php'); ?>
 <?php include('includes/registration_login.php'); ?>
 <?php include('includes/header.php'); ?>
-<title>LifeBlog | Sign in </title>
+<title>Артистический блог</title>
 </head>
 
 <body>
@@ -10,13 +10,13 @@
 
         <div style="width: 40%; margin: 20px auto;">
             <form method="post" action="login.php">
-                <h2>Login</h2>
+                <h2>Логин</h2>
                 <?php include(ROOT_PATH . '/includes/errors.php') ?>
                 <input type="text" name="username" value="<?php echo $username; ?>" value="" placeholder="Username">
                 <input type="password" name="password" placeholder="Password">
                 <button type="submit" class="btn" name="login_btn">Login</button>
                 <p>
-                    Not yet a member? <a href="register.php">Sign up</a>
+                    Еще не зарегестрированы? <a href="register.php">Зарегестриоваться</a>
                 </p>
             </form>
         </div>
