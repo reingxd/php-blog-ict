@@ -3,7 +3,7 @@
 
 <?php include('includes/header.php'); ?>
 
-<title>Артистический блог </title>
+<title>Авторский блог студии "ResinArt"</title>
 </head>
 
 <body>
@@ -11,7 +11,7 @@
         <?php include(ROOT_PATH . '/includes/navbar.php'); ?>
         <div style="width: 40%; margin: 20px auto;">
             <form method="post" action="register.php">
-                <h2>Зарегистрироваться на Артистическом блоге</h2>
+                <h2>Зарегистрироваться на Авторском блоге студии "ResinArt"</h2>
                 <?php include(ROOT_PATH . '/includes/errors.php') ?>
                 <input type="text" name="username" value="<?php echo $username; ?>" placeholder="Username">
                 <input type="email" name="email" value="<?php echo $email ?>" placeholder="Email">

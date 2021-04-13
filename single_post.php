@@ -7,7 +7,7 @@ if (isset($_GET['post-slug'])) {
 $topics = getAllTopics();
 ?>
 <?php include('includes/header.php'); ?>
-<title> <?php echo $post['title'] ?> Артистический блог</title>
+<title> <?php echo $post['title'] ?>Авторский блог студии "ResinArt"</title>
 </head>
 
 <body>

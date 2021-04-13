@@ -1,7 +1,7 @@
 <?php include('config.php'); ?>
 <?php include('includes/registration_login.php'); ?>
 <?php include('includes/header.php'); ?>
-<title>Артистический блог</title>
+<title>Авторский блог студии "ResinArt"</title>
 </head>
 
 <body>

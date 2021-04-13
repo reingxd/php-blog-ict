@@ -7,7 +7,7 @@
 		$posts = getPublishedPostsByTopic($topic_id);
 	}
 ?>
-	<title>Артистический блог</title>
+	<title>Авторский блог студии "ResinArt"</title>
 </head>
 <body>
 <div class="container">

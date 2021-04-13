@@ -7,7 +7,7 @@
 	<div class="header">
 		<div class="logo">
 			<a href="<?php echo'./dashboard.php' ?>">
-				<h1>Артистический блог-Админ</h1>
+				<h1>Авторский блог студии "ResinArt"-Админ</h1>
 			</a>
 		</div>
 		<?php if (isset($_SESSION['user'])): ?>
