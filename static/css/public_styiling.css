@@ -12,6 +12,7 @@ body {
   margin: 0;
   padding-bottom: 6rem;
   min-height: 100%;
+  background-color: #ffffff;
 }
 
 h1,
@@ -49,7 +50,7 @@ form input {
   border-radius: 3px;
   box-sizing: border-box;
   background: transparent;
-  border: 1px solid #846c00;
+  border: 1px solid #0c5e59 ;
 }
 form input:focus {
   outline: none;
@@ -57,7 +58,7 @@ form input:focus {
 
 .btn {
   color: white;
-  background: #846c00;
+  background: #0c5e59;
   text-align: center;
   border: none;
   border-radius: 5px;
@@ -75,7 +76,7 @@ form input:focus {
 .navbar {
   margin: 0 auto;
   overflow: hidden;
-  background-color: #846c00;
+  background-color: #0c5e59;
   border-radius: 0px 0px 6px 6px;
 }
 .navbar ul {
@@ -104,7 +105,7 @@ form input:focus {
   padding-left: 40px;
 }
 .navbar .logo_div h1 {
-  color: #ffffff;
+  color: #ced9d8;
   font-size: 3em;
   letter-spacing: 5px;
   font-weight: 100;
@@ -126,7 +127,7 @@ form input:focus {
 .banner {
   margin: 5px auto;
   min-height: 400px;
-  color: white;
+  color: #ced9d8;
   border-radius: 5px;
   background-image: url("../images/background2.jpg");
   background-size: 100% 100%;
@@ -160,7 +161,7 @@ form input:focus {
   text-decoration: none;
 }
 .banner .welcome_msg a:hover {
-  background: #846c00;
+  background: #0c5e59;
 }
 
 .banner .login_div {
@@ -185,7 +186,7 @@ form input:focus {
 }
 .banner .login_div form button {
   display: block;
-  background: #846c00;
+  background: #0c5e59;
   margin-left: 20%;
 }
 .content {
