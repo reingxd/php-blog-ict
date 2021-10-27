@@ -2,7 +2,9 @@
 function getPublishedPosts()
 {
 	global $conn;
-	$sql = "SELECT * FROM posts WHERE published=true";
+
+	$search = $_GET['search'] ?: ''; 
+	$sql = "SELECT * FROM posts WHERE published=true AND title like '%$search%'";
 	$result = mysqli_query($conn, $sql);
 	$posts = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
