@@ -7,7 +7,7 @@ if (isset($_GET['post-slug'])) {
 $topics = getAllTopics();
 ?>
 <?php include('includes/header.php'); ?>
-<title> <?php echo $post['title'] ?>Авторский блог студии "ResinArt"</title>
+<title> <?php echo $post['title'] ?> | Авторский блог студии "ResinArt"</title>
 </head>
 
 <body>
@@ -23,6 +23,9 @@ $topics = getAllTopics();
                         <h2 class="post-title"><?php echo $post['title']; ?></h2>
                         <div class="post-body-div">
                             <?php echo html_entity_decode($post['body']); ?>
+                        </div>
+                        <div style='display:flex; justify-content:center'>
+                            <img style='width:40%;' src="<?php echo BASE_URL . '/static/images/' . $post['image']; ?>" alt="<?php echo $_GET['post-slug']; ?>">
                         </div>
                     <?php endif ?>
                 </div>
