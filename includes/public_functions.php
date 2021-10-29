@@ -3,7 +3,7 @@ function getPublishedPosts()
 {
 	global $conn;
 
-	$search = $_GET['search'] ?: ''; 
+	$search = $_GET['search'] ?: '';
 	$sql = "SELECT * FROM posts WHERE published=true AND title like '%$search%'";
 	$result = mysqli_query($conn, $sql);
 	$posts = mysqli_fetch_all($result, MYSQLI_ASSOC);
@@ -50,7 +50,7 @@ function getTopicNameById($id)
 	$topic = mysqli_fetch_assoc($result);
 	return $topic['name'];
 }
-function getPost($slug)
+function getPost()
 {
 	global $conn;
 	$post_slug = $_GET['post-slug'];
@@ -63,6 +63,14 @@ function getPost($slug)
 	}
 	return $post;
 }
+function getUser($id)
+{
+	global $conn;
+	$sql = "SELECT * FROM users WHERE id='$id'";
+	$result = mysqli_query($conn, $sql);
+	$user = mysqli_fetch_assoc($result);
+	return $user;
+}
 function getAllTopics()
 {
 	global $conn;
@@ -70,4 +78,27 @@ function getAllTopics()
 	$result = mysqli_query($conn, $sql);
 	$topics = mysqli_fetch_all($result, MYSQLI_ASSOC);
 	return $topics;
+}
+function getPostComments()
+{
+	$post_id  = getPost()['id'];
+	global $conn;
+	$sql = "SELECT * FROM comments WHERE post_id='$post_id'";
+	$result = mysqli_query($conn, $sql);
+	$comments = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+	return $comments;
+}
+
+if (isset($_POST['comment']) && $_SESSION['user']) {
+
+	$comment =  $_POST['comment'];
+	$post_id  = getPost()['id'];
+	$user_id =  $_SESSION['user']['id'];
+
+	$query = "INSERT INTO comments (user_id, post_id, comment) VALUES( '$user_id','$post_id','$comment')";
+	mysqli_query($conn, $query);
+
+	header('location: single_post.php?post-slug=' . $_GET['post-slug']);
+	exit(0);
 }
