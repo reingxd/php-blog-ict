@@ -95,7 +95,7 @@ if (isset($_POST['login_btn'])) {
             if (in_array($_SESSION['user']['role'], ["Admin", "Author"])) {
                 $_SESSION['message'] = "Вход осуществлен";
 
-                header('location: ' . BASE_URL . '/admin/dashboard.php');
+                header('location: ' . BASE_URL . 'admin/dashboard.php');
                 exit(0);
             } else {
                 $_SESSION['message'] = "Вход осуществлен";

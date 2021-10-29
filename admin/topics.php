@@ -1,4 +1,5 @@
 <?php include('../config.php'); ?>
+<?php include(ROOT_PATH . '/admin/includes/check_author_role.php'); ?>
 <?php include('./includes/admin_functions.php'); ?>
 <?php include('./includes/head_section.php'); ?>
 
@@ -14,7 +15,7 @@
         <?php include('./includes/menu.php') ?>
         <div class="action">
             <h1 class="page-title">Create/Edit Topics</h1>
-            <form method="post" action="<?php echo'./topics.php'; ?>">
+            <form method="post" action="<?php echo './topics.php'; ?>">
                 <?php include('../includes/errors.php') ?>
                 <?php if ($isEditingTopic === true) : ?>
                     <input type="hidden" name="topic_id" value="<?php echo $topic_id; ?>">

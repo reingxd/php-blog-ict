@@ -1,17 +1,18 @@
 <?php include('../config.php'); ?>
-<?php include( './includes/admin_functions.php'); ?>
+<?php include(ROOT_PATH . '/admin/includes/check_admin_role.php'); ?>
+<?php include('./includes/admin_functions.php'); ?>
 <?php
 $admins = getAdminUsers();
 $roles = ['Admin', 'Author'];
 ?>
-<?php include( './includes/head_section.php'); ?>
+<?php include('./includes/head_section.php'); ?>
 <title>Admin | Manage users</title>
 </head>
 
 <body>
-    <?php include( './includes/navbar.php') ?>
+    <?php include('./includes/navbar.php') ?>
     <div class="container content">
-        <?php include( './includes/menu.php') ?>
+        <?php include('./includes/menu.php') ?>
 
         <div class="action">
             <h1 class="page-title">Create/Edit Admin User</h1>
@@ -19,7 +20,7 @@ $roles = ['Admin', 'Author'];
             <form method="post" action="<?php echo  './users.php'; ?>">
 
 
-                <?php include( '../includes/errors.php') ?>
+                <?php include('../includes/errors.php') ?>
 
 
                 <?php if ($isEditingUser === true) : ?>
@@ -48,7 +49,7 @@ $roles = ['Admin', 'Author'];
 
         <div class="table-div">
 
-            <?php include( '../includes/messages.php') ?>
+            <?php include('../includes/messages.php') ?>
 
             <?php if (empty($admins)) : ?>
                 <h1>No admins in the database.</h1>
