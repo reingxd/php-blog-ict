@@ -22,7 +22,7 @@ h4,
 h5,
 h6 {
   color: #444;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 a {
   text-decoration: none;
@@ -39,7 +39,7 @@ hr {
 form h2 {
   margin: 25px auto;
   text-align: center;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 form input {
   width: 100%;
@@ -50,13 +50,13 @@ form input {
   border-radius: 3px;
   box-sizing: border-box;
   background: transparent;
-  border: 1px solid #0c5e59 ;
+  border: 1px solid #0c5e59;
 }
 form input:focus {
   outline: none;
 }
 
-.btn {
+/* .btn {
   color: white;
   background: #0c5e59;
   text-align: center;
@@ -67,7 +67,12 @@ form input:focus {
   margin: 10px 0px;
   padding: 13px 20px;
   text-decoration: none;
+} */
+
+.btn {
+  @apply bg-purple-800 py-4 px-8 text-white font-bold uppercase text-xs rounded hover:bg-gray-200 hover:text-gray-800;
 }
+
 .container {
   width: 80%;
   margin: 0px auto;
@@ -85,7 +90,7 @@ form input:focus {
 }
 .navbar ul li {
   float: left;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 .navbar ul li a {
   display: block;
@@ -109,7 +114,7 @@ form input:focus {
   font-size: 3em;
   letter-spacing: 5px;
   font-weight: 100;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 .footer {
@@ -141,13 +146,13 @@ form input:focus {
   color: #ffffff;
   margin: 25px 0px;
   font-size: 2.4em;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 .banner .welcome_msg p {
   color: white;
   font-size: 1.5em;
   line-height: 1.8em;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 .banner .welcome_msg p span {
   font-size: 0.81em;
@@ -174,7 +179,7 @@ form input:focus {
 .banner .login_div form h2 {
   color: white;
   margin-bottom: 20px;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 .banner .login_div form input {
   width: 60%;
@@ -182,7 +187,7 @@ form input:focus {
   border: 1px solid white;
   margin: 10px auto;
   letter-spacing: 1.3px;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 .banner .login_div form button {
   display: block;
@@ -202,7 +207,7 @@ form input:focus {
 .content .content-title {
   margin: 10px 0px;
   color: #374447;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 .content .post {
   width: 335px;
@@ -247,7 +252,7 @@ form input:focus {
   height: 100%;
   padding: 0px 5px;
   font-weight: 200;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 .content .post .post_info {
   color: #222;
@@ -277,7 +282,7 @@ form input:focus {
   text-align: center;
 }
 .post-body-div {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 1.2em;
 }
 .post-body-div p {
@@ -347,4 +352,3 @@ form input:focus {
   text-align: right;
   padding: 10px;
 }
-	
