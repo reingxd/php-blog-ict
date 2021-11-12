@@ -7,10 +7,28 @@
 				</a>
 			</div>
 			<ul class="flex gap-5">
-				<li><a class="active" href="index.php">Главная</a></li>
-				<li><a href="#news">Новости</a></li>
-				<li><a href="#contact">Контакты</a></li>
-				<li><a href="#about">О нас</a></li>
+				<li>
+					<a class="active" href="index.php">Главная</a>
+				</li>
+				<li>
+					<a href="#news">Новости</a>
+				</li>
+				<li>
+					<a href="#contact">Контакты</a>
+				</li>
+				<li>
+					<a href="#about">О нас</a>
+				</li>
+				<?php if (isset($_SESSION['user']['role']) == "Admin") : ?>
+					<li>
+						<a class="text-blue-500" href="admin/index.php">Админка</a>
+					</li>
+				<?php endif ?>
+				<?php if (isset($_SESSION['user']['username'])) : ?>
+					<li>
+						<a class="text-red-500" href="logout.php">Выход</a>
+					</li>
+				<?php endif ?>
 			</ul>
 		</div>
 	</div>

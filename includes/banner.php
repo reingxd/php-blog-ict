@@ -1,8 +1,6 @@
 <?php if (isset($_SESSION['user']['username'])) { ?>
-	<div class="logged_in_info">
-		<span>Добро пожаловать <?php echo $_SESSION['user']['username'] ?></span>
-		|
-		<span><a href="logout.php">Выход</a></span>
+	<div class="py-3 px-5 bg-blue-100 text-blue-900 text-sm rounded-md border border-blue-200" role="alert">
+		Добро пожаловать <strong><?php echo $_SESSION['user']['username'] ?></strong>
 	</div>
 <?php } else { ?>
 	<div class="bg-cover bg-center h-auto text-white py-24 px-10 object-fill" style="background-image: url('https://images.unsplash.com/photo-1617638924751-cc232f82ecf9?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fHJlc2lufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')">

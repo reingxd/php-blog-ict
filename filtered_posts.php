@@ -7,7 +7,7 @@ if (isset($_GET['topic'])) {
 	$posts = getPublishedPostsByTopic($topic_id);
 }
 ?>
-<title>Авторский блог студии "ResinArt"</title>
+<title>ResinArt</title>
 </head>
 
 <body>

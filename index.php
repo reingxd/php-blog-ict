@@ -50,25 +50,21 @@
 				</div>
 			<?php endforeach ?>
 		</div>
+		<script>
+			const input = document.getElementById('search_field')
+
+			input.addEventListener("keyup", function(event) {
+				if (event.keyCode === 13) {
+					event.preventDefault();
+					search();
+				}
+			});
+
+			function search() {
+				const url = new URL(document.location);
+				url.searchParams.set('search', input.value);
+
+				document.location.href = url
+			}
+		</script>
 		<?php include('./includes/footer.php') ?>
-</body>
-
-</html>
-
-<script>
-	const input = document.getElementById('search_field')
-
-	input.addEventListener("keyup", function(event) {
-		if (event.keyCode === 13) {
-			event.preventDefault();
-			search();
-		}
-	});
-
-	function search() {
-		const url = new URL(document.location);
-		url.searchParams.set('search', input.value);
-
-		document.location.href = url
-	}
-</script>
