@@ -13,21 +13,10 @@ $comments_num = getCommentsNumber();
 </head>
 
 <body>
-	<div class="header">
-		<div class="logo">
-			<a href="<?php echo './dashboard.php' ?>">
-				<h1>Авторский блог студии "ResinArt"-Админ</h1>
-			</a>
-		</div>
-		<?php if (isset($_SESSION['user'])) : ?>
-			<div class="user-info">
-				<span><?php echo $_SESSION['user']['username'] ?></span> &nbsp; &nbsp;
-				<a href="<?php echo '../logout.php'; ?>" class="logout-btn">logout</a>
-			</div>
-		<?php endif ?>
-	</div>
+	<?php include(ROOT_PATH . '/admin/includes/navbar.php') ?>
+
 	<div class="container dashboard">
-		<h1>Приветствую</h1>
+		<h1>Приветствую <?php echo $_SESSION['user']['username'] ?></h1>
 		<div class="stats">
 			<a <?php if ($_SESSION['user']['role'] == 'Admin') echo 'href="users.php"'; ?> class="first">
 				<span><?php echo $users_num; ?></span> <br>
