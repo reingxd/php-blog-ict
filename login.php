@@ -1,24 +1,41 @@
 <?php include('config.php'); ?>
 <?php include('includes/registration_login.php'); ?>
 <?php include('includes/header.php'); ?>
-<title>Авторский блог студии "ResinArt"</title>
+<title>ResinArt</title>
 </head>
 
 <body>
+    <?php include(ROOT_PATH . '/includes/navbar.php'); ?>
     <div class="container">
-        <?php include(ROOT_PATH . '/includes/navbar.php'); ?>
-
-        <div style="width: 40%; margin: 20px auto;">
-            <form method="post" action="login.php">
-                <h2>Логин</h2>
-                <?php include(ROOT_PATH . '/includes/errors.php') ?>
-                <input type="text" name="username" value="<?php echo $username; ?>" value="" placeholder="Username">
-                <input type="password" name="password" placeholder="Password">
-                <button type="submit" class="btn" name="login_btn">Login</button>
-                <p>
-                    Еще не зарегестрированы? <a href="register.php">Зарегестриоваться</a>
-                </p>
-            </form>
+        <div class="flex items-center justify-center">
+            <div class="w-full max-w-md">
+                <form method="post" action="login.php">
+                    <div class="text-gray-800 text-2xl flex justify-center border-b-2 py-2 mb-4">
+                        Авторизация
+                    </div>
+                    <?php include(ROOT_PATH . '/includes/errors.php') ?>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 text-sm font-normal mb-2" for="username">
+                            Логин
+                        </label>
+                        <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" name="username" value="<?php echo $username; ?>" placeholder="Username" />
+                    </div>
+                    <div class="mb-3">
+                        <label class="block text-gray-700 text-sm font-normal mb-2" for="password">
+                            Пароль
+                        </label>
+                        <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" type="password" name="password" placeholder="Password" required autocomplete="current-password" />
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <button class="px-8 py-3 rounded text-white inline-block text-white font-bold uppercase text-xs rounded bg-blue-500 hover:bg-blue-600 focus:bg-blue-700" type="submit" name="login_btn">
+                            Войти
+                        </button>
+                        <a href="register.php" class="inline-block align-baseline font-normal text-sm text-blue-500 hover:text-blue-800">
+                            Еще не зарегестрированы?
+                        </a>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
     <?php include(ROOT_PATH . '/includes/footer.php'); ?>
